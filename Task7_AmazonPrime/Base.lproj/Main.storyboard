@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TNr-jO-9bg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task7_AmazonPrime" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,6 +197,7 @@
                             <constraint firstItem="LCh-uC-7VN" firstAttribute="top" secondItem="XoN-ug-Tfo" secondAttribute="bottom" id="y4D-1m-K4S"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="tZp-Jp-bm2"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="segCtrl" destination="XaE-ZB-pP1" id="4MZ-8d-1Un"/>
@@ -205,11 +206,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="-127"/>
+            <point key="canvasLocation" x="1070" y="-546"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="9l3-zg-OLJ">
+            <objects>
+                <viewController id="GJf-CS-u3z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="txa-8j-Xa0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="02B-Db-k31"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Find" image="magnifyingglass" catalog="system" id="RSh-Cj-D9s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5Y-jx-RIG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="350"/>
+        </scene>
+        <!--Downloads-->
+        <scene sceneID="bkr-pc-5Za">
+            <objects>
+                <viewController id="Gj2-Rz-UcB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fX-KC-jXw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CUY-02-yuF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Downloads" image="square.and.arrow.down" catalog="system" id="egd-na-u0B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GR-xP-oI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="-77"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4k1-OM-Bh1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TNr-jO-9bg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uhk-u2-tvh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lQt-do-PwW"/>
+                        <segue destination="GJf-CS-u3z" kind="relationship" relationship="viewControllers" id="38B-JA-tQV"/>
+                        <segue destination="Gj2-Rz-UcB" kind="relationship" relationship="viewControllers" id="5tf-O8-1R8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-Gf-zUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37.681159420289859" y="-127.23214285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="home" width="24" height="22"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="prime" width="1208" height="371"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <namedColor name="Theme">
             <color red="0.054000001400709152" green="0.090000003576278687" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
